@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSmart | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- MENÚ LATERAL -->
+    <header class="encabezado">
+
+       <div class="logo">
+    <img
+        src="logo-agrosmart.png"
+        alt="Logo AgroSmart"
+        class="logo-imagen">
+</div>
+
+<nav>
+    <a href="#inicio">
+        <span class="icono-menu">⌂</span> Inicio
+    </a>
+
+    <a href="#invernadero">
+        <span class="icono-menu">♧</span> Invernadero
+    </a>
+
+    <a href="#monitoreo">
+        <span class="icono-menu">◉</span> Monitoreo
+    </a>
+
+    <a href="#alertas">
+        <span class="icono-menu">⚠</span> Alertas
+    </a>
+
+    <a href="#historial">
+        <span class="icono-menu">▤</span> Historial
+    </a>
+
+    <a href="#riego">
+        <span class="icono-menu">♧</span> Riego
+    </a>
+
+    <a href="#plantas">
+        <span class="icono-menu">❀</span> Plantas
+    </a>
+
+    <a href="#recomendaciones">
+        <span class="icono-menu">✧</span> Recomendaciones
+    </a>
+</nav>
+
+    </header>
+
+    <main>
+
+        <!-- INICIO -->
+<section id="inicio" class="inicio">
+
+    <div class="inicio-texto">
+
+        <p class="pequeno">
+            SISTEMA INTELIGENTE DE INVERNADERO
+        </p>
+
+        <h2>
+            Bienvenido a<br>
+            <span>AgroSmart</span>
+        </h2>
+
+        <p class="descripcion">
+            Monitorea las condiciones de tu invernadero
+            y controla el sistema de riego de manera sencilla.
+        </p>
+
+        <a href="#monitoreo" class="boton">
+            Ver monitoreo
+        </a>
+
+    </div>
+
+    <div class="inicio-planta">
+        🪴
+    </div>
+
+    <!-- PANEL GENERAL -->
+
+    <div class="panel-resumen">
+
+        <div class="resumen-encabezado">
+            <div>
+                <span class="etiqueta-dorada">AGROSMART DASHBOARD</span>
+                <h3>Estado general del invernadero</h3>
+                <p>Resumen de las condiciones actuales.</p>
+            </div>
+
+            <span class="estado-general" id="estado-general-inicio">
+                ● En observación
+            </span>
+        </div>
+
+        <div class="resumen-grid">
+
+            <div class="resumen-item">
+                <span class="resumen-icono">🌡️</span>
+                <p>Temperatura</p>
+                <strong id="resumen-temperatura">-- °C</strong>
+            </div>
+
+            <div class="resumen-item">
+                <span class="resumen-icono">💧</span>
+                <p>Humedad ambiental</p>
+                <strong id="resumen-ambiental">-- %</strong>
+            </div>
+
+            <div class="resumen-item">
+                <span class="resumen-icono">🌱</span>
+                <p>Humedad del suelo</p>
+                <strong id="resumen-suelo">-- %</strong>
+            </div>
+
+            <div class="resumen-item">
+                <span class="resumen-icono">🚰</span>
+                <p>Nivel de agua</p>
+                <strong id="resumen-agua">-- %</strong>
+            </div>
+
+        </div>
+
+        <div class="resumen-pie">
+            <span>🌿 Sistema de monitoreo AgroSmart</span>
+            <a href="#monitoreo">Ver detalles →</a>
+        </div>
+
+    </div>
+
+</section>
+<!-- =================================
+     VISTA DEL INVERNADERO
+================================== -->
+
+<section id="invernadero" class="seccion vista-invernadero">
+
+    <div class="titulo">
+        <p>MODELO AGROSMART</p>
+        <h2>Vista del invernadero</h2>
+    </div>
+
+    <div class="invernadero-panel">
+
+        <!-- INFORMACION -->
+
+        <div class="invernadero-texto">
+
+            <span class="etiqueta-dorada">
+                PROYECTO INTELIGENTE
+            </span>
+
+            <h3>
+                Cultivando el futuro
+                con tecnología.
+            </h3>
+
+            <p>
+                AgroSmart integra sensores y un sistema de
+                riego automatizado para monitorear las
+                condiciones del cultivo y facilitar su cuidado.
+            </p>
+
+            <div class="invernadero-caracteristicas">
+
+                <div>
+                    <span>🌡️</span>
+                    <p>Control de temperatura</p>
+                </div>
+
+                <div>
+                    <span>💧</span>
+                    <p>Monitoreo de humedad</p>
+                </div>
+
+                <div>
+                    <span>🌱</span>
+                    <p>Riego automatizado</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ILUSTRACION DEL INVERNADERO -->
+
+        <div class="invernadero-escena">
+
+            <span class="sensor-etiqueta etiqueta-temperatura">
+                🌡️ Temperatura
+            </span>
+
+            <span class="sensor-etiqueta etiqueta-humedad">
+                💧 Humedad
+            </span>
+
+            <div class="invernadero-dibujo">
+
+                <div class="invernadero-techo"></div>
+
+                <div class="invernadero-cuerpo">
+
+                    <div class="marco-central"></div>
+
+                    <div class="surcos">
+
+                        <span>🥬</span>
+                        <span>🌿</span>
+                        <span>🍅</span>
+                        <span>🌱</span>
+
+                    </div>
+
+                    <div class="suelo-invernadero"></div>
+
+                </div>
+
+                <div class="base-invernadero"></div>
+
+            </div>
+
+            <div class="estado-escena">
+                <span></span>
+                Modelo ilustrativo de AgroSmart
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MONITOREO -->
+        <section id="monitoreo" class="seccion">
+
+            <div class="titulo">
+                <p>MONITOREO</p>
+                <h2>Estado del invernadero</h2>
+            </div>
+
+            <div class="tarjetas-datos">
+
+                <!-- TEMPERATURA -->
+                <div class="dato">
+
+                    <div class="dato-superior">
+                        <span class="dato-icono">🌡️</span>
+                   <span class="estado-ok" id="monitor-estado-temperatura">Normal</span>
+                    </div>
+
+                    <h3>Temperatura</h3>
+                    <strong id="valor-temperatura">25 °C</strong>
+                    <p>Temperatura actual</p>
+
+                    <div class="barra-contenedor">
+                        <div
+                            class="barra-progreso temperatura"
+                            id="barra-temperatura"
+                            style="width: 62.5%;">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- HUMEDAD AMBIENTAL -->
+                <div class="dato">
+
+                    <div class="dato-superior">
+                        <span class="dato-icono">💧</span>
+                        <span class="estado-ok" id="monitor-estado-ambiental">Normal</span>
+                    </div>
+
+                    <h3>Humedad ambiental</h3>
+                    <strong id="valor-ambiental">68 %</strong>
+                    <p>Humedad actual</p>
+
+                    <div class="barra-contenedor">
+                        <div
+                            class="barra-progreso"
+                            id="barra-ambiental"
+                            style="width: 68%;">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- HUMEDAD DEL SUELO -->
+                <div class="dato">
+
+                    <div class="dato-superior">
+                        <span class="dato-icono">🌱</span>
+                      <span class="estado-alerta" id="monitor-estado-suelo">Media</span>
+                    </div>
+
+                    <h3>Humedad del suelo</h3>
+                    <strong id="valor-suelo">54 %</strong>
+                    <p>Humedad actual</p>
+
+                    <div class="barra-contenedor">
+                        <div
+                            class="barra-progreso"
+                            id="barra-suelo"
+                            style="width: 54%;">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- NIVEL DE AGUA -->
+                <div class="dato">
+
+                    <div class="dato-superior">
+                        <span class="dato-icono">🚰</span>
+                        <span class="estado-ok" id="monitor-estado-agua">Disponible</span>
+                    </div>
+
+                    <h3>Nivel de agua</h3>
+                    <strong id="valor-agua">82 %</strong>
+                    <p>Tanque de agua</p>
+
+                    <div class="barra-contenedor">
+                        <div
+                            class="barra-progreso"
+                            id="barra-agua"
+                            style="width: 82%;">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        
+<!-- =================================
+     ALERTAS Y RECOMENDACIONES
+================================== -->
+
+<section id="alertas" class="seccion alertas">
+
+    <div class="titulo">
+        <p>ASISTENCIA INTELIGENTE</p>
+        <h2>Alertas y recomendaciones</h2>
+    </div>
+
+    <!-- RESUMEN GENERAL -->
+
+    <div class="alerta-resumen alerta-normal"
+         id="alerta-resumen">
+
+        <div class="alerta-resumen-icono" id="alerta-icono">
+            ✓
+        </div>
+
+        <div class="alerta-resumen-texto">
+
+            <h3 id="alerta-titulo">
+                Todo en orden
+            </h3>
+
+            <p id="alerta-mensaje">
+                Las condiciones se encuentran dentro
+                de los rangos de demostración.
+            </p>
+
+        </div>
+
+        <span class="alerta-etiqueta" id="alerta-nivel">
+            Normal
+        </span>
+
+    </div>
+
+    <!-- TARJETAS DE ALERTAS -->
+
+    <div class="alertas-grid">
+
+        <!-- TEMPERATURA -->
+
+        <div class="alerta-item">
+
+            <div class="alerta-item-superior">
+                <span>🌡️</span>
+                <span class="estado-ok"
+                      id="estado-temperatura">
+                    Normal
+                </span>
+            </div>
+
+            <h3>Temperatura</h3>
+
+            <p id="mensaje-temperatura">
+                Temperatura dentro del rango de referencia.
+            </p>
+
+        </div>
+
+        <!-- HUMEDAD AMBIENTAL -->
+
+        <div class="alerta-item">
+
+            <div class="alerta-item-superior">
+                <span>💧</span>
+                <span class="estado-ok"
+                      id="estado-ambiental">
+                    Normal
+                </span>
+            </div>
+
+            <h3>Humedad ambiental</h3>
+
+            <p id="mensaje-ambiental">
+                Humedad ambiental dentro del rango de referencia.
+            </p>
+
+        </div>
+
+        <!-- HUMEDAD DEL SUELO -->
+
+        <div class="alerta-item">
+
+            <div class="alerta-item-superior">
+                <span>🌱</span>
+                <span class="estado-ok"
+                      id="estado-suelo">
+                    Normal
+                </span>
+            </div>
+
+            <h3>Humedad del suelo</h3>
+
+            <p id="mensaje-suelo">
+                Humedad del suelo adecuada.
+            </p>
+
+        </div>
+
+        <!-- NIVEL DE AGUA -->
+
+        <div class="alerta-item">
+
+            <div class="alerta-item-superior">
+                <span>🚰</span>
+                <span class="estado-ok"
+                      id="estado-agua">
+                    Normal
+                </span>
+            </div>
+
+            <h3>Nivel de agua</h3>
+
+            <p id="mensaje-agua">
+                Reserva de agua disponible.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =================================
+     HISTORIAL DE MONITOREO
+================================== -->
+
+<section id="historial" class="seccion historial">
+
+    <div class="titulo">
+        <p>REGISTRO DE DATOS</p>
+        <h2>Historial de monitoreo</h2>
+    </div>
+
+    <div class="historial-panel">
+
+        <div class="historial-superior">
+
+            <div>
+                <h3>Humedad del suelo</h3>
+                <p>Variación de las últimas lecturas</p>
+            </div>
+
+            <span class="historial-etiqueta">
+                📊 En seguimiento
+            </span>
+
+        </div>
+
+        <div class="historial-grafica">
+            
+<div class="resumen-historial">
+
+    <div class="dato-historial">
+        <span>Humedad actual</span>
+        <h3 id="humedad-actual">-- %</h3>
+        <small>Última lectura</small>
+    </div>
+
+    <div class="dato-historial">
+        <span>Humedad máxima</span>
+        <h3 id="humedad-maxima">-- %</h3>
+        <small>Mayor valor registrado</small>
+    </div>
+
+    <div class="dato-historial">
+        <span>Humedad mínima</span>
+        <h3 id="humedad-minima">-- %</h3>
+        <small>Menor valor registrado</small>
+    </div>
+
+</div>
+
+
+            <canvas id="grafica-suelo"
+                    width="900"
+                    height="280">
+            </canvas>
+
+        </div>
+
+        <div class="historial-pie">
+
+            <span>
+                <i></i>
+                Humedad del suelo
+            </span>
+
+            <small id="cantidad-lecturas">
+                Esperando lecturas...
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        <!-- ESTADO DEL SISTEMA -->
+        <section class="seccion sistema">
+
+            <div class="titulo">
+                <p>SISTEMA</p>
+                <h2>Estado del sistema</h2>
+            </div>
+
+            <div class="sistema-grid">
+
+                <div class="estado-sistema">
+
+                    <div class="icono-sistema">⚙️</div>
+
+                    <div>
+                        <h3>ESP32</h3>
+                        <p>Controlador principal</p>
+                    </div>
+
+                    <span class="conectado">
+                        ● Modo demostración
+                    </span>
+
+                </div>
+
+                <div class="estado-sistema">
+
+                    <div class="icono-sistema">📡</div>
+
+                    <div>
+                        <h3>Sensores</h3>
+                        <p>Lecturas simuladas</p>
+                    </div>
+
+                    <span class="conectado">
+                        ● Activos
+                    </span>
+
+                </div>
+
+                <div class="estado-sistema">
+
+                    <div class="icono-sistema">💦</div>
+
+                    <div>
+                        <h3>Riego</h3>
+                        <p>Estado actual</p>
+                    </div>
+
+                    <span class="apagado" id="estado-riego-sistema">
+                        ● Apagado
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SISTEMA DE RIEGO -->
+        <section id="riego" class="seccion riego">
+
+            <div class="titulo">
+                <p>CONTROL</p>
+                <h2>Sistema de riego</h2>
+            </div>
+
+            <div class="riego-panel">
+
+                <div class="riego-info">
+
+                    <div class="gota">
+                        💧
+                    </div>
+
+                    <div>
+                        <h3>Riego automático</h3>
+
+                        <p>
+                            El sistema puede activar el riego cuando
+                            la humedad del suelo sea baja.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="riego-estado">
+
+                    <p>Estado actual</p>
+
+                    <strong id="estado-riego">Apagado</strong>
+
+                    <button id="boton-riego" type="button">
+                        Activar riego
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+<!-- =================================
+     TIPOS DE PLANTAS
+================================== -->
+
+<section id="plantas" class="seccion plantas">
+
+    <div class="titulo">
+        <p>CULTIVOS</p>
+        <h2>Conoce nuestros cultivos</h2>
+    </div>
+
+    <div class="plantas-grid">
+
+        <!-- LECHUGA -->
+
+        <div class="planta-card">
+
+            <span>🥬</span>
+
+            <h3>Lechuga</h3>
+
+            <p>
+                Cultivo de hojas que necesita humedad
+                constante y un ambiente fresco.
+            </p>
+
+            <details class="planta-detalles">
+
+                <summary>Ver cuidados</summary>
+
+                <div class="informacion-cultivo">
+
+                    <h4>Necesidades</h4>
+
+                    <p>🌡️ Temperatura moderada.</p>
+
+                    <p>💧 Suelo con humedad constante, sin encharcamientos.</p>
+
+                    <p>☀️ Buena iluminación.</p>
+
+                    <h4>Recomendación AgroSmart</h4>
+
+                    <p>
+                        Vigilar la humedad del suelo para
+                        evitar que la planta se reseque.
+                    </p>
+
+                </div>
+
+            </details>
+
+        </div>
+
+
+        <!-- ALBAHACA -->
+
+        <div class="planta-card">
+
+            <span>🌿</span>
+
+            <h3>Albahaca</h3>
+
+            <p>
+                Planta aromática que requiere buena
+                iluminación y riego equilibrado.
+            </p>
+
+            <details class="planta-detalles">
+
+                <summary>Ver cuidados</summary>
+
+                <div class="informacion-cultivo">
+
+                    <h4>Necesidades</h4>
+
+                    <p>🌡️ Ambiente cálido.</p>
+
+                    <p>💧 Humedad adecuada, evitando el exceso de agua.</p>
+
+                    <p>☀️ Buena exposición a la luz.</p>
+
+                    <h4>Recomendación AgroSmart</h4>
+
+                    <p>
+                        Comprobar la humedad del suelo
+                        y evitar el riego excesivo.
+                    </p>
+
+                </div>
+
+            </details>
+
+        </div>
+
+
+        <!-- TOMATE -->
+
+        <div class="planta-card">
+
+            <span>🍅</span>
+
+            <h3>Tomate</h3>
+
+            <p>
+                Cultivo que necesita riego controlado
+                y condiciones ambientales adecuadas.
+            </p>
+
+            <details class="planta-detalles">
+
+                <summary>Ver cuidados</summary>
+
+                <div class="informacion-cultivo">
+
+                    <h4>Necesidades</h4>
+
+                    <p>🌡️ Temperatura adecuada para su crecimiento.</p>
+
+                    <p>💧 Humedad equilibrada en el suelo.</p>
+
+                    <p>☀️ Buena iluminación.</p>
+
+                    <h4>Recomendación AgroSmart</h4>
+
+                    <p>
+                        Mantener un seguimiento de la humedad
+                        para evitar períodos prolongados de sequedad.
+                    </p>
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+</section>
+<!-- RECOMENDACIONES INTELIGENTES -->
+<section id="recomendaciones" class="seccion">
+    <div class="titulo-seccion">
+        <span class="subtitulo">CUIDADO DE CULTIVOS</span>
+        <h2>Recomendaciones inteligentes</h2>
+        <p>Consejos para mantener tus plantas en buenas condiciones.</p>
+    </div>
+
+    <div class="recomendacion-principal">
+        <div class="icono-recomendacion">🌱</div>
+
+        <div class="contenido-recomendacion">
+            <span class="etiqueta-recomendacion">AGROSMART TE RECOMIENDA</span>
+            <h3 id="titulo-recomendacion">Monitoreo de tus cultivos</h3>
+            <p id="texto-recomendacion">
+                Aquí aparecerán recomendaciones según las condiciones
+                registradas por los sensores.
+            </p>
+        </div>
+    </div>
+
+    <div class="consejos-cultivos">
+        <div class="consejo-cultivo">
+            <h3>🥬 Lechuga</h3>
+            <p>Mantener una humedad adecuada en el suelo y evitar que se seque demasiado.</p>
+        </div>
+
+        <div class="consejo-cultivo">
+            <h3>🌿 Albahaca</h3>
+            <p>Vigilar la humedad y procurar que la planta tenga buenas condiciones ambientales.</p>
+        </div>
+
+        <div class="consejo-cultivo">
+            <h3>🍅 Tomate</h3>
+            <p>Controlar la humedad del suelo y evitar el exceso de agua.</p>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+ <footer>
+
+    <img
+        src="logo-agrosmart.png"
+        alt="Logo AgroSmart"
+        class="logo-footer">
+
+    <p>
+        Tecnología para un cultivo más inteligente.
+    </p>
+
+    <small>
+        Proyecto estudiantil © 2026
+    </small>
+
+</footer>
+
+</body>
+</html>
