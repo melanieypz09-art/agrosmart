@@ -1,4 +1,24 @@
+// =====================================
+// CONEXIÓN CON SUPABASE
+// =====================================
 
+const SUPABASE_URL = "https://amjxpechazwytfrlwnuq.supabase.co";
+
+const SUPABASE_KEY = "sb_publishable_tJvp4RzatpwYRmXvj1gflQ_XJajBUxG";
+
+const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL, SUPABASE_KEY
+);
+// =====================================
+// PRUEBA DE CONEXIÓN CON SUPABASE
+// =====================================
+
+console.log("AgroSmart: conexión con Supabase iniciada");
+
+console.log(
+    "Cliente de Supabase:",
+    supabaseClient ? "Disponible" : "No disponible"
+);
 // =====================================
 // AGROSMART - CONTROL DEL DASHBOARD
 // =====================================
